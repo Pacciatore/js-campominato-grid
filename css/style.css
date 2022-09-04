@@ -1,0 +1,29 @@
+/* Personal variables */
+:root {
+    --tr-main-bg: #7fffd4;
+}
+
+.tr-main-bg-color {
+    background-color: var(--tr-main-bg);
+}
+
+
+
+
+
+/*#region DEBUGGER  */
+.debug header,
+.debug footer {
+    min-height: 100px;
+}
+
+.debug main {
+    min-height: 500px;
+}
+
+.debug #grid {
+    min-height: 300px;
+    background-color: purple;
+}
+
+/*#endregion DEBUGGER  */
