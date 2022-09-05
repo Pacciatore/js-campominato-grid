@@ -36,7 +36,6 @@ function getRandomNumbersArray() {
 }
 
 
-
 function getRandomNumbersArrayAlternative() {
     const array = [];
 
@@ -55,17 +54,34 @@ function getRandomNumbersArrayAlternative() {
 }
 
 
-
 const initGrid = () => {
     const element = document.getElementById('grid');
     element.innerHTML = '';
     return element;
 }
 
+
 function createCell(label) {
     const cellElement = document.createElement('div');
-    cellElement.className = 'cell p-5 d-flex align-items-center justify-content-center';
     cellElement.innerHTML = label;
+    cellElement.className = 'cell fw-bold p-5 d-flex align-items-center justify-content-center';
+
+    cellElement.addEventListener('click', function () { cellColorChange(cellElement, label) })
 
     return cellElement;
 }
+
+function cellColorChange(cell, label) {
+    console.log('cella cliccata ' + label);
+
+    const isEven = isNumberEven(label);
+
+    if (isEven) {
+        cell.classList.add('even');
+    } else {
+        cell.classList.add('odd');
+    }
+
+}
+
+const isNumberEven = (number) => number % 2 === 0;
