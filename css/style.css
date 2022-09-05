@@ -8,12 +8,40 @@
     background-color: var(--tr-main-bg);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
 
 /*#region Content  */
+
+main {
+    height: 80vh;
+}
+
+header {
+    height: 100px;
+}
+
+footer {
+    height: auto;
+}
+
+#grid {
+    height: 70vh;
+    overflow-y: auto;
+    position: relative;
+}
+
 #grid .cell {
     width: 10%;
     height: 100px;
     border: 1px solid black;
+    cursor: pointer;
+}
+
+#grid .cell.even,
+#grid .cell.odd {
+    cursor: default;
 }
 
 .even {
