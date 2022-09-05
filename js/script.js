@@ -14,7 +14,7 @@ button.addEventListener('click',
             const numberToDisplay = cellValues[i];
             const cellElement = createCell(numberToDisplay);
 
-            console.log(i, cellElement);
+            // console.log(i, cellElement);
 
             gridElement.append(cellElement);
         }
@@ -73,15 +73,33 @@ function createCell(label) {
 
 function cellColorChange(cell, label) {
     console.log('cella cliccata ' + label);
+    let bomb = false;
 
-    const isEven = isNumberEven(label);
+    // Additional content
+    console.log('lancio monetina')
+    if (coinFlip() === 0) {
+        console.log('bomb');
 
-    if (isEven) {
-        cell.classList.add('even');
+        cell.classList.add('bomb');
+        bomb = true;
     } else {
-        cell.classList.add('odd');
+        console.log('croce')
+
+        bomb = false;
+    }
+
+    if (!bomb) {
+        const isEven = isNumberEven(label);
+
+        if (isEven) {
+            cell.classList.add('even');
+        } else {
+            cell.classList.add('odd');
+        }
     }
 
 }
 
 const isNumberEven = (number) => number % 2 === 0;
+
+const coinFlip = () => Math.round(Math.random() * 1);

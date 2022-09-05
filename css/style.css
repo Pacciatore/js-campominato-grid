@@ -44,15 +44,24 @@ footer {
     cursor: default;
 }
 
+.even,
+.odd,
+.bomb {
+    transition: background-color .5s, color 1s;
+}
+
 .even {
     background-color: var(--tr-second-bool);
     color: white;
-    transition: background-color .5s, color 1s;
 }
 
 .odd {
     background-color: yellow;
-    transition: background-color .5s;
+}
+
+.bomb {
+    background-color: red;
+    color: yellow;
 }
 
 /*#endregion Content  */
