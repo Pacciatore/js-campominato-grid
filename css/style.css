@@ -8,8 +8,14 @@
 }
 
 
+/*#region Content  */
+#grid .cell {
+    width: 10%;
+    height: 100px;
+    border: 1px solid black;
+}
 
-
+/*#endregion Content  */
 
 /*#region DEBUGGER  */
 .debug header,
