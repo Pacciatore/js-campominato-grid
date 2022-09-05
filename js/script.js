@@ -82,6 +82,7 @@ function cellColorChange(cell, label) {
 
         cell.classList.add('bomb');
         bomb = true;
+        setTimeout(bombText, 500)
     } else {
         console.log('croce')
 
@@ -99,6 +100,8 @@ function cellColorChange(cell, label) {
     }
 
 }
+
+const bombText = () => alert('Hai preso una bomba!');
 
 const isNumberEven = (number) => number % 2 === 0;
 
